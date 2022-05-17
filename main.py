@@ -1,6 +1,7 @@
 import mysql.connector
 from src.Entity.Receptor import *
 from src.Entity.Doador import *
+from src.Options import *
 import os
 
 
@@ -49,8 +50,9 @@ try:
 
         db = Doador('doador', connection, cursor)
 
-        db.editar()
-        db.show()
+
+    while True:
+        options(db)
         
 
 
