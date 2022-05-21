@@ -23,7 +23,7 @@ try:
     cursor = connection.cursor()
 
     print('Banco de dados conectado\n\n')
-    print('\n1 - doador\n2 - receptor\n3 - banco de sangue\n4 - Enfermeiros\n5 - Hospital')
+    print('\n1 - doador\n2 - receptor\n3 - sangue\n4 - banco de sangue\n5 - Hospital')
     answ = 0
     db = ''
 
@@ -41,19 +41,19 @@ try:
         os.system('clear' if os.name=='posix' else 'cls')
         print('A tabela selecionada foi: 5 - Hospital\n')
 
-        db = Doador('hospital', connection, cursor)
-        
+        db = Hospital('hospital', connection, cursor)
+
     elif answ == 4:
         os.system('clear' if os.name=='posix' else 'cls')
         print('A tabela selecionada foi: 4 - Banco de sangue\n')
 
-        db = Doador('banco_sangue', connection, cursor)
+        db = Banco_sangue('banco_sangue', connection, cursor)
 
     elif answ == 3:
         os.system('clear' if os.name=='posix' else 'cls')
         print('A tabela selecionada foi: 3 - Sangue\n')
 
-        db = Doador('sangue', connection, cursor)
+        db = Sangue('sangue', connection, cursor)
 
     elif answ == 2:
         os.system('clear' if os.name=='posix' else 'cls')

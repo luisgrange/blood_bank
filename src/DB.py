@@ -23,8 +23,10 @@ class DB:
         try:
             self.cursor.execute(query, (id,))
             self.conn.commit()
-            print("\nDoador deletado")
+            print("\nEntrada deletado com sucesso")
             # print(self.cursor.fetchall())
         except:
             self.conn.rollback()
  
+    # def tableJoin(self):
+    #     query = 'SELECT t1.*, t2.* FROM '+self.table+' as t1 INNER JOIN %s as t2 ON t2.'
