@@ -2,7 +2,7 @@ from src.Entity.Receptor import *
 from src.Entity.Doador import *
 
 def options(db):
-    choice = input('Digite qual ação tomar: ')
+    choice = input('Digite qual ação tomar\nlistar\tdeletar\tinserir\teditar\texportar: ')
 
     if choice == 'listar':
         db.show()
@@ -11,6 +11,6 @@ def options(db):
     elif choice == 'inserir':
         db.inserir()
     elif choice == 'editar':
-        db.editar
+        db.editar()
     else:
         return False

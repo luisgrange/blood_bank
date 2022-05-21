@@ -1,13 +1,14 @@
 import mysql.connector
+import os
 
 from src.Entity.Receptor import *
 from src.Entity.Doador import *
 from src.Entity.Hopsital import *
 from src.Entity.Banco_sangue import *
 from src.Entity.Sangue import *
+from src.Entity.Enfermeiro import *
 
 from src.Options import *
-import os
 
 
 os.system('clear' if os.name=='posix' else 'cls')
@@ -36,7 +37,11 @@ try:
     if answ == 7:
         pass
     elif answ == 6:
-        pass
+        os.system('clear' if os.name=='posix' else 'cls')
+        print('A tabela selecionada foi: 6 - Enfermeiro\n')
+
+        db = Enfermeiro('enfermeiro', connection, cursor)
+
     elif answ == 5:
         os.system('clear' if os.name=='posix' else 'cls')
         print('A tabela selecionada foi: 5 - Hospital\n')
@@ -66,6 +71,7 @@ try:
         print('A tabela selecionada foi: 1 - Doador\n')
 
         db = Doador('doador', connection, cursor)
+
 
 
     while True:
