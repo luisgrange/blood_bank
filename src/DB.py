@@ -28,5 +28,12 @@ class DB:
         except:
             self.conn.rollback()
  
-    # def tableJoin(self):
-    #     query = 'SELECT t1.*, t2.* FROM '+self.table+' as t1 INNER JOIN %s as t2 ON t2.'
+    def tableJoin(self):
+         query = 'SELECT e.id, e.nome, e.tipo_sangue, f.nome, s.fk_receptorId FROM doador as e INNER JOIN sangue as s ON s.fk_doadorId = e.id INNER JOIN receptor as f ON f.id = s.fk_receptorId;'
+
+         self.cursor.execute(query)
+
+         for items in self.cursor:
+            for item in items:
+                 print(item, end='\t')
+            print()
