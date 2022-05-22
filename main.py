@@ -1,6 +1,8 @@
+# módulos utilizados
 import mysql.connector
 import os
 
+# entidades do banco de dados
 from src.Entity.Receptor import *
 from src.Entity.Doador import *
 from src.Entity.Hopsital import *
@@ -8,6 +10,7 @@ from src.Entity.Banco_sangue import *
 from src.Entity.Sangue import *
 from src.Entity.Enfermeiro import *
 
+# seleção de opções de ações
 from src.Options import *
 
 

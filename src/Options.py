@@ -15,6 +15,9 @@ def options(db):
 
     elif choice == 'editar':
         db.editar()
+        
+    elif choice == 'combinar':
+        db.tableJoin()
 
     else:
         return False
