@@ -1,7 +1,6 @@
 # módulos utilizados
 import mysql.connector
 import os
-from Entity.Gestor_hospital import Gestor_hospital
 
 # entidades do banco de dados
 from src.Entity.Receptor import *
@@ -10,6 +9,7 @@ from src.Entity.Hopsital import *
 from src.Entity.Banco_sangue import *
 from src.Entity.Sangue import *
 from src.Entity.Enfermeiro import *
+from src.Entity.Gestor_hospital import *
 
 # seleção de opções de ações
 from src.Options import *
@@ -20,7 +20,8 @@ configs = {
     'user': 'root',
     'host': 'localhost',
     'database': 'blood_bank',
-    'password': ''
+    'password': '',
+    'use_pure': 'True'
 }
 
 try:
@@ -28,7 +29,7 @@ try:
     cursor = connection.cursor()
 
     print('Banco de dados conectado\n\n')
-    print('\n1 - doador\n2 - receptor\n3 - sangue\n4 - banco de sangue\n5 - Hospital')
+    print('\n1 - doador\n2 - receptor\n3 - sangue\n4 - banco de sangue\n5 - Hospital\nEnfermeiro(a)\nGestor do hospital: ')
     answ = 0
     db = ''
 
@@ -83,9 +84,6 @@ try:
 
     while True:
         options(db)
-        
-
-
 
 
 except mysql.connector.Error as e:

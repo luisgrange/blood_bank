@@ -1,3 +1,4 @@
+
 class DB:
     def __init__(self, table, conn, cursor):
         self.table = table
@@ -37,3 +38,4 @@ class DB:
             for item in items:
                  print(item, end='\t')
             print()
+    
