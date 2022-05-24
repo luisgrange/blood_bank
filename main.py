@@ -38,7 +38,10 @@ try:
             print('Ocorreu um erro, tente novamente! ')
 
     if answ == 7:
-        pass
+        os.system('clear' if os.name=='posix' else 'cls')
+        print('A tabela selecionada foi: 7 - gestor do hospital\n')
+
+        db = Gestor_Hospital('gestor_hospital', connection, cursor)
     elif answ == 6:
         os.system('clear' if os.name=='posix' else 'cls')
         print('A tabela selecionada foi: 6 - Enfermeiro\n')
