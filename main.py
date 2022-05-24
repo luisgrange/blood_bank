@@ -1,6 +1,7 @@
 # módulos utilizados
 import mysql.connector
 import os
+from Entity.Gestor_hospital import Gestor_hospital
 
 # entidades do banco de dados
 from src.Entity.Receptor import *
@@ -41,7 +42,7 @@ try:
         os.system('clear' if os.name=='posix' else 'cls')
         print('A tabela selecionada foi: 7 - gestor do hospital\n')
 
-        db = Gestor_Hospital('gestor_hospital', connection, cursor)
+        db = Gestor_hospital('gestor_hospital', connection, cursor)
     elif answ == 6:
         os.system('clear' if os.name=='posix' else 'cls')
         print('A tabela selecionada foi: 6 - Enfermeiro\n')
